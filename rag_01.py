@@ -1,3 +1,5 @@
+"""Module providing a RAG from PDF."""
+
 import os
 from dotenv import load_dotenv
 
