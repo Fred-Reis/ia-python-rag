@@ -22,15 +22,12 @@ text_splitter = RecursiveCharacterTextSplitter(
     chunk_size=1000,
     chunk_overlap=200,
 )
-
 chunks = text_splitter.split_documents(
     documents=docs,
 )
 
 PERSIST_DIRECTORY = "db"
-
 embedding = OpenAIEmbeddings()
-
 vector_store = Chroma.from_documents(
     documents=chunks,
     embedding=embedding,
